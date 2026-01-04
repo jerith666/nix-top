@@ -40,9 +40,9 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Tracks what nix is building";
-    homepage = https://github.com/samueldr/nix-top;
+    homepage = https://github.com/jerith666/nix-top;
     license = licenses.mit;
-    maintainers = with maintainers; [ samueldr ];
+    maintainers = with maintainers; [ jerith666 ];
     platforms = platforms.linux ++ platforms.darwin;
     inherit version;
   };
