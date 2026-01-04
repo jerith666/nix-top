@@ -13,3 +13,8 @@ Usage: nix-top [options]
    -1, --once                       Only run once (generates one screen)
 
 ```
+
+when run as non-root, `nix-top` is only able to provide raw build
+process information.  to get a useful summary of what's building, run
+as root.  (this is because `nix-top` works by reading the `env-vars`
+file inside the build sandbox of each build process.)
