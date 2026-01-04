@@ -68,7 +68,7 @@ end
 def get_out_path(user, pid)
   begin
   # whew!
-  build_dir = `find -L /tmp -maxdepth 1 -user #{user.shellescape} -exec stat --printf '%Z:%n\\n' '{}' ';' | sort -n`
+  build_dir = `find -L /nix/var/nix/builds -maxdepth 2 -user #{user.shellescape} -exec stat --printf '%Z:%n\\n' '{}' ';' | sort -n`
     .strip
     .split("\n")
     .last

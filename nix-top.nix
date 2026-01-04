@@ -16,7 +16,7 @@ let
 in
 stdenv.mkDerivation rec {
   name = "nix-top-${version}";
-  version = "0.3.0";
+  version = "0.4.0";
 
   src = ./nix-top;
   unpackCmd = "mkdir -p src; cp $curSrc src/nix-top";
